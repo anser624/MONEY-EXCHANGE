@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency-Exchange</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form
+      id="money-exchange-form"
+      onsubmit="event.preventDefault(); getExchangeRate();"
+    >
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required min="0" />
+
+      <label for="from">From:</label>
+      <select id="from" name="from" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="GBP">GBP</option>
+        <option value="PKR">PKR</option>
+        <option value="INR">INR</option>
+        <option value="AUD">AUD</option>
+      </select>
+
+      <label for="to">To:</label>
+      <select id="to" name="to" required>
+        <option value="PKR">PKR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="GBP">GBP</option>
+        <option value="INR">INR</option>
+        <option value="AUD">AUD</option>
+      </select>
+
+      <button type="submit" id="exchange">Exchange</button>
+    </form>
+
+    <div id="result"></div>
+  </body>
+</html>
